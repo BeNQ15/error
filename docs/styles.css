@@ -37,3 +37,8 @@ button:hover {
     font-size: 18px;
     color: #ff4d4d; /* Цвет текста для сообщений об ошибках */
 }
+
+figure {
+    margin-top: 20px;
+    color: white; /* Цвет текста в фигуре */
+}
