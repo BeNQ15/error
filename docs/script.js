@@ -2,7 +2,6 @@ const errorButton = document.getElementById('errorButton');
 const errorMessage = document.getElementById('errorMessage');
 const backgroundSound = document.getElementById('backgroundSound');
 const toggleSoundButton = document.getElementById('toggleSoundButton');
-const errorSound = document.getElementById('errorSound');
 const streamSource = document.getElementById('streamSource');
 
 const errors = [
@@ -38,7 +37,6 @@ loadRadioStation();
 errorButton.addEventListener('click', () => {
     const randomIndex = Math.floor(Math.random() * errors.length);
     errorMessage.textContent = errors[randomIndex];
-    errorSound.play(); // Воспроизводим звук ошибки
 });
 
 // Обработчик для кнопки включения/выключения радиостанции
