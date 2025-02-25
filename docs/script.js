@@ -1,5 +1,7 @@
 const errorButton = document.getElementById('errorButton');
 const errorMessage = document.getElementById('errorMessage');
+const backgroundSound = document.getElementById('backgroundSound');
+const toggleSoundButton = document.getElementById('toggleSoundButton');
 
 const errors = [
     "Ошибка 404: Страница не найдена.",
@@ -15,4 +17,15 @@ const errors = [
 errorButton.addEventListener('click', () => {
     const randomIndex = Math.floor(Math.random() * errors.length);
     errorMessage.textContent = errors[randomIndex];
+});
+
+// Обработчик для кнопки включения/выключения звука
+toggleSoundButton.addEventListener('click', () => {
+    if (backgroundSound.paused) {
+        backgroundSound.play();
+        toggleSoundButton.textContent = 'Выключить звук';
+    } else {
+        backgroundSound.pause();
+        toggleSoundButton.textContent = 'Включить звук';
+    }
 });
