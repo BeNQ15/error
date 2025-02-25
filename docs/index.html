@@ -7,16 +7,20 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Элемент audio для фоновой музыки -->
-    <audio id="г" loop>
-        <source src="https://bash.news/yuldash5" type="audio/mpeg"> <!-- Замените на URL вашей радиостанции -->
+    <audio id="errorSound">
+        <source src="path/to/your/error-sound.mp3" type="audio/mpeg"> <!-- Замените на путь к вашему .mp3 файлу -->
+        Ваш браузер не поддерживает аудио.
+    </audio>
+
+    <audio id="backgroundSound" loop>
+        <source id="streamSource" type="audio/mpeg">
         Ваш браузер не поддерживает аудио.
     </audio>
 
     <div class="container">
         <h1>Генератор ошибок</h1>
         <button id="errorButton">Сгенерировать ошибку</button>
-        <button id="toggleSoundButton">Включить звук</button>
+        <button id="toggleSoundButton">Включить</button>
         <p id="errorMessage" class="error-message"></p>
     </div>
 
