@@ -7,20 +7,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <audio id="errorSound">
-        <source src="docs/B4.mp3" type="audio/mpeg"> <!-- Путь к звуку ошибки -->
+    <audio id="backgroundSound" loop autoplay>
+        <source src="B4.mp3" type="audio/mpeg">
         Ваш браузер не поддерживает аудио.
     </audio>
-
-    <audio id="backgroundSound" loop>
-        <source id="trackSource" type="audio/mpeg"> <!-- Источник трека будет установлен через JavaScript -->
-        Ваш браузер не поддерживает аудио.
-    </audio>
-
     <div class="container">
         <h1>Генератор ошибок</h1>
         <button id="errorButton">Сгенерировать ошибку</button>
-        <button id="backgroundButton">Включить фон</button>
         <p id="errorMessage" class="error-message"></p>
     </div>
 
