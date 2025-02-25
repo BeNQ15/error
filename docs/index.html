@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Элемент audio для фоновой музыки -->
+    <audio id="errorSound">
+        <source src="docs/B4.mp3" type="audio/mpeg"> <!-- Путь к звуку ошибки -->
+        Ваш браузер не поддерживает аудио.
+    </audio>
+
     <audio id="backgroundSound" loop>
-        <source src="docs/B4.mp3" type="audio/mpeg"> <!-- Путь к звуку -->
+        <source src="docs/B4.mp3" type="audio/mpeg"> <!-- Путь к фоновому звуку -->
         Ваш браузер не поддерживает аудио.
     </audio>
 
