@@ -1,5 +1,7 @@
 const errorButton = document.getElementById('errorButton');
 const errorMessage = document.getElementById('errorMessage');
+const backgroundSound = document.getElementById('backgroundSound');
+const backgroundButton = document.getElementById('backgroundButton');
 
 const errors = [
     "Ошибка 404: Страница не найдена.",
@@ -15,4 +17,15 @@ const errors = [
 errorButton.addEventListener('click', () => {
     const randomIndex = Math.floor(Math.random() * errors.length);
     errorMessage.textContent = errors[randomIndex];
+});
+
+// Обработчик для кнопки включения/выключения фоновой музыки
+backgroundButton.addEventListener('click', () => {
+    if (backgroundSound.paused) {
+        backgroundSound.play();
+        backgroundButton.textContent = 'Стоп'; // Меняем текст на "Стоп"
+    } else {
+        backgroundSound.pause();
+        backgroundButton.textContent = 'Включить фон'; // Меняем текст на "Включить фон"
+    }
 });
