@@ -1,5 +1,3 @@
-JavaScript
-
 const errorButton = document.getElementById('errorButton');
 const errorMessage = document.getElementById('errorMessage');
 
