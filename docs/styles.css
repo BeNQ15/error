@@ -11,10 +11,10 @@ body {
 
 .container {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон */
+    background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный белый фон */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 button {
@@ -25,6 +25,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin: 10px; /* Отступ между кнопками */
 }
 
 button:hover {
@@ -34,5 +35,5 @@ button:hover {
 .error-message {
     margin-top: 20px;
     font-size: 18px;
-    color: #ff4d4d;
+    color: #ff4d4d; /* Цвет текста для сообщений об ошибках */
 }
