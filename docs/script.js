@@ -2,6 +2,7 @@ const errorButton = document.getElementById('errorButton');
 const errorMessage = document.getElementById('errorMessage');
 const backgroundSound = document.getElementById('backgroundSound');
 const backgroundButton = document.getElementById('backgroundButton');
+const errorSound = document.getElementById('errorSound');
 
 const errors = [
     "Ошибка 404: Страница не найдена.",
@@ -17,6 +18,7 @@ const errors = [
 errorButton.addEventListener('click', () => {
     const randomIndex = Math.floor(Math.random() * errors.length);
     errorMessage.textContent = errors[randomIndex];
+    errorSound.play(); // Воспроизводим звук ошибки
 });
 
 // Обработчик для кнопки включения/выключения фоновой музыки
