@@ -3,54 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Играть музыку</title>
-    <style>
-        body {
-            background-color: #e0f7fa; /* Светло-голубой фон */
-            color: #004d40; /* Темно-зеленый текст */
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            color: #00796b; /* Цвет заголовка */
-        }
-        button {
-            background-color: #00796b; /* Цвет кнопки */
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        button:hover {
-            background-color: #004d40; /* Темно-зеленый при наведении */
-        }
-        .error-message {
-            margin-top: 20px;
-            color: red; /* Цвет сообщения об ошибке */
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Это страница с музыкой</h1>
     <audio src="docs/B4.mp3" controls></audio>
-    <button onclick="generateError()">Ошибка</button>
+    <button id="error-button">Ошибка</button>
     <div class="error-message" id="error-message"></div>
 
-    <script>
-        function generateError() {
-            const errors = [
-                "Ошибка: Неверный формат файла.",
-                "Ошибка: Файл не найден.",
-                "Ошибка: Доступ запрещен.",
-                "Ошибка: Внутренняя ошибка сервера.",
-                "Ошибка: Превышено время ожидания."
-            ];
-            const randomIndex = Math.floor(Math.random() * errors.length);
-            document.getElementById('error-message').innerText = errors[randomIndex];
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
