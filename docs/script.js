@@ -1,37 +1,32 @@
-const style = document.createElement('style');
-style.textContent = `
-    body {
-        background-color: #e0f2f1; /* Светло-зеленый фон */
-        color: #004d40; /* Темно-зеленый текст */
-        font-family: Arial, sans-serif;
-        text-align: center;
-        padding: 20px;
-    }
-    h1 {
-        color: #00796b; /* Цвет заголовка */
-    }
-    button {
-        background-color: #00796b; /* Цвет кнопки */
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        border-radius: 5px;
-        margin-top: 20px;
-    }
-    button:hover {
-        background-color: #004d40; /* Темно-зеленый при наведении */
-    }
-    .error-message {
-        margin-top: 20px;
-        color: red; /* Цвет сообщения об ошибке */
-    }
-`;
-document.head.appendChild(style);
+document.body.style.backgroundColor = "#e0f2f1"; // Светло-зеленый фон
+document.body.style.color = "#004d40"; // Темно-зеленый текст
+document.body.style.fontFamily = "Arial, sans-serif";
+document.body.style.textAlign = "center";
+document.body.style.padding = "20px";
+
+const h1 = document.querySelector('h1');
+h1.style.color = "#00796b"; // Цвет заголовка
+
+const button = document.getElementById('error-button');
+button.style.backgroundColor = "#00796b"; // Цвет кнопки
+button.style.color = "white";
+button.style.border = "none";
+button.style.padding = "10px 20px";
+button.style.fontSize = "16px";
+button.style.cursor = "pointer";
+button.style.borderRadius = "5px";
+button.style.marginTop = "20px";
+
+button.addEventListener('mouseover', () => {
+    button.style.backgroundColor = "#004d40"; // Темно-зеленый при наведении
+});
+
+button.addEventListener('mouseout', () => {
+    button.style.backgroundColor = "#00796b"; // Возвращаем цвет кнопки
+});
 
 // Генерация ошибок
-document.getElementById('error-button').addEventListener('click', generateError);
+button.addEventListener('click', generateError);
 
 function generateError() {
     const errors = [
