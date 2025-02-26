@@ -1,33 +1,13 @@
-const errorButton = document.getElementById('errorButton');
-const errorMessage = document.getElementById('errorMessage');
-const backgroundSound = document.getElementById('backgroundSound');
-const backgroundButton = document.getElementById('backgroundButton');
-const errorSound = document.getElementById('errorSound');
+document.getElementById('error-button').addEventListener('click', generateError);
 
-const errors = [
-    "Ошибка 404: Страница не найдена.",
-    "Ошибка 500: Внутренняя ошибка сервера.",
-    "Ошибка 403: Доступ запрещен.",
-    "Ошибка 400: Неверный запрос.",
-    "Ошибка 408: Время ожидания истекло.",
-    "Ошибка 401: Неавторизованный доступ.",
-    "Ошибка 502: Плохой шлюз.",
-    "Ошибка 503: Сервис недоступен."
-];
-
-errorButton.addEventListener('click', () => {
+function generateError() {
+    const errors = [
+        "Ошибка: Неверный формат файла.",
+        "Ошибка: Файл не найден.",
+        "Ошибка: Доступ запрещен.",
+        "Ошибка: Внутренняя ошибка сервера.",
+        "Ошибка: Превышено время ожидания."
+    ];
     const randomIndex = Math.floor(Math.random() * errors.length);
-    errorMessage.textContent = errors[randomIndex];
-    errorSound.play(); // Воспроизводим звук ошибки
-});
-
-// Обработчик для кнопки включения/выключения фоновой музыки
-backgroundButton.addEventListener('click', () => {
-    if (backgroundSound.paused) {
-        backgroundSound.play();
-        backgroundButton.textContent = 'Стоп'; // Меняем текст на "Стоп"
-    } else {
-        backgroundSound.pause();
-        backgroundButton.textContent = 'Включить фон'; // Меняем текст на "Включить фон"
-    }
-});
+    document.getElementById('error-message').innerText = errors[randomIndex];
+}
