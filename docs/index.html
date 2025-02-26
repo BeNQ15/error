@@ -1,28 +1,20 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Играть музыку</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ошибка и Музыка</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Это страница с музыкой</h1>
-    <audio src="docs/B4.mp3" controls></audio>
-    <button id="error-button">Ошибка</button>
-    <div class="error-message" id="error-message"></div>
+  <div class="container">
+    <button id="errorButton">Ошибка</button>
+    <button id="musicButton">Музыка</button>
+  </div>
 
-    <script>
-        // Генерация ошибок
-        document.getElementById('error-button').addEventListener('click', function() {
-            const errors = [
-                "Ошибка: Неверный формат файла.",
-                "Ошибка: Файл не найден.",
-                "Ошибка: Доступ запрещен.",
-                "Ошибка: Внутренняя ошибка сервера.",
-                "Ошибка: Превышено время ожидания."
-            ];
-            const randomIndex = Math.floor(Math.random() * errors.length);
-            document.getElementById('error-message').innerText = errors[randomIndex];
-        });
-    </script>
+  <audio id="music" src="docs/B4.mp3"></audio>
+
+  <script src="script.js"></script>
 </body>
 </html>
