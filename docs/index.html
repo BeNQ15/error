@@ -12,9 +12,7 @@
 
     <script>
         // Генерация ошибок
-        document.getElementById('error-button').addEventListener('click', generateError);
-
-        function generateError() {
+        document.getElementById('error-button').addEventListener('click', function() {
             const errors = [
                 "Ошибка: Неверный формат файла.",
                 "Ошибка: Файл не найден.",
@@ -24,7 +22,7 @@
             ];
             const randomIndex = Math.floor(Math.random() * errors.length);
             document.getElementById('error-message').innerText = errors[randomIndex];
-        }
+        });
     </script>
 </body>
 </html>
