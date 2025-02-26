@@ -3,12 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Играть музыку</title>
-    <script src="script.js" defer></script>
 </head>
 <body>
     <h1>Это страница с музыкой</h1>
     <audio src="docs/B4.mp3" controls></audio>
     <button id="error-button">Ошибка</button>
     <div class="error-message" id="error-message"></div>
+
+    <script>
+        // Генерация ошибок
+        document.getElementById('error-button').addEventListener('click', generateError);
+
+        function generateError() {
+            const errors = [
+                "Ошибка: Неверный формат файла.",
+                "Ошибка: Файл не найден.",
+                "Ошибка: Доступ запрещен.",
+                "Ошибка: Внутренняя ошибка сервера.",
+                "Ошибка: Превышено время ожидания."
+            ];
+            const randomIndex = Math.floor(Math.random() * errors.length);
+            document.getElementById('error-message').innerText = errors[randomIndex];
+        }
+    </script>
 </body>
 </html>
